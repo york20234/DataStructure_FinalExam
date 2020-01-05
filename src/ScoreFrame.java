@@ -66,8 +66,8 @@ public class ScoreFrame extends JFrame {
                 }
                 else {
                   try {
+                      ScoreState tmpScore =new ScoreState(jtxName.getText(),Integer.parseInt(jtxScore.getText()),count+1);
                       count++;
-                      ScoreState tmpScore =new ScoreState(jtxName.getText(),Integer.parseInt(jtxScore.getText()),count);
                       scoreStates.add(tmpScore);
                       scoreStates= sort(scoreStates);
                       reflash(scoreStates);
