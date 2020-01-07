@@ -33,7 +33,7 @@ public class ScoreFrame extends JFrame {
     }
 
     private void init(){
-        this.setBounds(30,30,500,500);
+        this.setBounds(30,30,700,700);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         cp=this.getContentPane();
         cp.setLayout(new BorderLayout());
@@ -47,11 +47,14 @@ public class ScoreFrame extends JFrame {
         jplInput.add(jtxScore);
         jplInput.add(jbtnSend);
         //上方物件
+        jlbName.setFont(new Font(null,Font.PLAIN,20));
+        jlbScore.setFont(new Font(null,Font.PLAIN,20));
+        jbtnSend.setFont(new Font(null,Font.PLAIN,20));
 
         for (int i=0;i<10;i++){
             count++;
             String tmpName="default";
-            ScoreState tmpScore =new ScoreState(tmpName,rd.nextInt(99999999),i+1);
+            ScoreState tmpScore =new ScoreState(tmpName,rd.nextInt(999999),i+1);
             scoreStates.add(tmpScore);
             scoreStates= sort(scoreStates);
         }//新增資料並排序
